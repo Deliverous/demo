@@ -1,0 +1,4 @@
+blog:
+  image: deliverous/blog
+  ports:
+    - "192.168.33.101:80:80"
