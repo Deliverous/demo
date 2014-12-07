@@ -4,3 +4,18 @@ blog:
   - ip: 192.168.33.101
     container_port: 80
     host_port: 80
+
+mysql:
+    image: mysql
+    environment:
+        MYSQL_ROOT_PASSWORD: admin
+
+wordpress
+    image: wordpress
+    environment:
+        WORDPRESS_DB_PASSWORD: admin
+    ports:
+    - ip: wordpress
+      container_port: 80
+      host_port: 80
+
