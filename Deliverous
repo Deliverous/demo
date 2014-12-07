@@ -1,7 +1,7 @@
 blog:
   image: deliverous/blog
   ports:
-  - ip: 192.168.33.101
+  - ip: blog
     container_port: 80
     host_port: 80
 
