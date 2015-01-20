@@ -1,14 +1,10 @@
-blog:
-  image: deliverous/blog
-  ports:
-  - ip: blog
-    container_port: 80
-    host_port: 80
-
 mysql:
     image: mysql
     environment:
-        MYSQL_ROOT_PASSWORD: admin
+      MYSQL_ROOT_PASSWORD: admin
+    volumes:
+    - name: mysql_data
+      path: /var/lib/mysql
 
 wordpress:
     image: wordpress
@@ -21,5 +17,4 @@ wordpress:
     links:
     - name: mysql
       alias: mysql
-
 
