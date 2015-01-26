@@ -1,20 +1,7 @@
-mysql:
-    image: mysql
-    environment:
-      MYSQL_ROOT_PASSWORD: admin
-    volumes:
-    - name: mysql_data
-      path: /var/lib/mysql
-
-wordpress:
-    image: wordpress
-    environment:
-        WORDPRESS_DB_PASSWORD: admin
+apache:
+    image: tclavier/apache
     ports:
     - ip: wordpress
       container_port: 80
       host_port: 80
-    links:
-    - name: mysql
-      alias: mysql
 
