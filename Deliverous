@@ -1,7 +1,7 @@
 apache:
-    image: tclavier/apache
+    image: registry.deliverous.net/tclavier/apache
     ports:
-    - ip: wordpress
+    - ip: demo.deliverous.com
       container_port: 80
       host_port: 80
 
