@@ -1,5 +1,5 @@
 apache:
-    image: registry.deliverous.net/tclavier/apache
+    image: registry.deliverous.net/tclavier/adeo
     ports:
     - ip: demo.deliverous.com
       container_port: 80
