@@ -1,7 +1,19 @@
-apache:
-    image: registry.deliverous.net/tclavier/adeo
+mysql:
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: admin
+    volumes:
+    - name: mysql_data
+      path: /var/lib/mysql
+
+wordpress:
+    image: wordpress
+    environment:
+      WORDPRESS_DB_PASSWORD: admin
     ports:
-    - ip: demo.deliverous.com
+    - ip: wordpress
       container_port: 80
       host_port: 80
-
+    links:
+    - name: mysql
+      alias: mysql
